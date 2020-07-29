@@ -1,0 +1,11 @@
+--- /usr/local/bin/docker-entrypoint.sh	2019-12-04 00:26:22.000000000 +0000
++++ /tmp/docker-entrypoint.sh	2019-12-09 15:45:55.296548193 +0000
+@@ -158,7 +158,7 @@
+ #    ie: docker_process_sql -f my-file.sql
+ #    ie: docker_process_sql <my-file.sql
+ docker_process_sql() {
+-	local query_runner=( psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --no-password )
++	local query_runner=( psql --username "$POSTGRES_USER" --no-password )
+ 	if [ -n "$POSTGRES_DB" ]; then
+ 		query_runner+=( --dbname "$POSTGRES_DB" )
+ 	fi
