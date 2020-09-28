@@ -6,7 +6,8 @@ Created on 5 мар. 2020 г.
 
 from fabricio import docker, tasks
 from projects import Efir, ItCluster
-from _ast import arguments
+from _ast import arguments, In
+from pickle import INST
 #from compose.cli import command
 
 web = tasks.DockerTasks(
@@ -25,12 +26,23 @@ web = tasks.DockerTasks(
     #account="ladmin"
     )
             
-#DT=ItCluster()
+DT=ItCluster()
 
 if __name__ == '__main__':
     
+    branch='rolesystem'
     inst=ItCluster()
+    
+    
+    inst.packStrategy()
+    inst.branchConf(branch='master')
+    inst.addEnv()
+    #inst.rebuildPostgres()
+    #inst.rebuildNginx()
+    
+    #inst.rebuildFpm()
     inst.compile()
+    inst.migratePostgres()
     #inst.applay_args(something='applay')
     print("hahqa")
 

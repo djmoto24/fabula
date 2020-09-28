@@ -1,0 +1,166 @@
+# In all environments, the following files are loaded if they exist,
+# the later taking precedence over the former:
+#
+#  * .env                contains default values for the environment variables needed by the app
+#  * .env.local          uncommitted file with local overrides
+#  * .env.$APP_ENV       committed environment-specific defaults
+#  * .env.$APP_ENV.local uncommitted environment-specific overrides
+#
+# Real environment variables win over .env files.
+#
+# DO NOT DEFINE PRODUCTION SECRETS IN THIS FILE NOR IN ANY OTHER COMMITTED FILES.
+#
+# Run "composer dump-env prod" to compile .env files for production use (requires symfony/flex >=1.2).
+# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+
+###> symfony/framework-bundle ###
+APP_ENV=prod
+APP_SECRET=50ea8aa646ac1d99d02b3e3dae3da9b1
+#TRUSTED_PROXIES=127.0.0.1,127.0.0.2
+#TRUSTED_HOSTS='^localhost|example\.com$'
+###< symfony/framework-bundle ###
+
+###> doctrine/doctrine-bundle ###
+# Format described at http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url
+# For an SQLite database, use: "sqlite:///%kernel.project_dir%/var/data.db"
+# Configure your db driver and server_version in config/packages/doctrine.yaml
+DATABASE_URL=pgsql://moscluster:Li2iR0wLa5@172.17.0.1:54320/moscluster
+DB_NAME=moscluster
+DB_USER=moscluster
+DB_PASS=Li2iR0wLa5
+###< doctrine/doctrine-bundle ###
+
+IAS_SQL_SERVER_HOST=172.24.59.3
+IAS_SQL_SERVER_DB=WebCluster
+IAS_SQL_SERVER_USER=WebCluster
+IAS_SQL_SERVER_PASS=81AE4DBF-04B3-4DDD-A3B5-B10C094DF2F2
+
+
+###> symfony/swiftmailer-bundle ###
+# For Gmail as a transport, use: "gmail://username:password@localhost"
+# For a generic SMTP server, use: "smtp://localhost:25?encryption=&auth_mode="
+# Delivery is disabled by default via "null://localhost"
+MAILER_URL=null://localhost
+###< symfony/swiftmailer-bundle ###
+
+HOST=https://reliz.itcluster.srvdev.ru/
+SUDIR_CLIENT_ID=reliz.itcluster.srvdev.ru
+SUDIR_CLIENT_SECRET=pyKBULRr9O9S3Ti
+ELK_SYSTEM_ID=itcluster.mos.ru
+ELK_SECRET=VgoKa0uXIXd9fLWExygEh3Haychm
+IAS_SECRET=33b6f01da67d4269baee2e52c3853a3f
+ELK_ADDRESS=https://my.mos.ru/static/js/elk-api-0.3.js?date=2019-07-19T15
+ELK_XDM_ADDRESS=https://my.mos.ru/static/js/easyXDM-2.4.17.1.min.js
+SEMANTIC1_SITE=172.24.36.170:8080
+SEMANTIC2_SITE=10.15.53.146:8393
+#SEMANTIC2_SITE=79.143.25.73:8393
+IASDNPP_SITE=https://rpp.mos.ru
+IASDNPP_OBJECT_TOKEN=ej3yNolPszGOzyO5FIJ1pExKktnvtE8N26NnCdua
+IASDNPP_TOKEN=33b6f01da67d4269baee2e52c3853a3f
+IAS_1C_TOKEN=2b7dd4ebbbdf4fbb9bf3fa6ad4b98d2f
+YA_MAP_KEY=f77118e1-e9c1-471c-b80b-4867899e2863
+
+REQUEST_IN_CLUSTER=BDC929E2FDB24839B70F31426021B2C5
+REQUEST_IN_CLUSTER_XML=p11906
+REQUEST_IN_CLUSTER_PDF=p11907
+
+#WEB-SOCKET
+WS_JS_ADDREESS=wss://notifications.mos.ru:1338
+WS_ADDRESS_LISTEN=127.0.0.1
+WS_ADDRESS_PORT=1337
+
+###> google/apiclient ###
+GOOGLE_API_KEY=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+###< google/apiclient ###
+
+
+FILE_ADAPTER=App\Service\Documents\Adapters\LocalStoreFileAdapder
+
+FACTORING_HOST=10.89.98.136
+FACTORING_LOGIN=imoscow-tech-user
+FACTORING_PASS=5813686cF4ba7D4403X8213D14acYCB0c744
+FACTORING_JOIN_EMAILS=ShiveDG@cluster.mos.ru;LernerAS@cluster.mos.ru
+
+
+#blockchain
+BLOCKCHAIN_SITE=172.24.53.142:9000
+
+#recommendations
+RECOMMENDATIONS_ADDRESS=http://169.47.101.243:8393
+
+REQUEST_PILOT_PRODUCT=8c24333bebac4b7bae3371ba13cc7789
+
+
+#cluster members fileName
+CLUSTER_MEMBERS_FILENAME='Участники кластера'
+
+SUDIR_ENV='prod'
+
+SK_AUTH_URL='https://sso.sk.ru/auth/realms/membersSK/protocol/openid-connect/auth'
+SK_TOKEN_URL='https://sso.sk.ru/auth/realms/membersSK/protocol/openid-connect/token'
+SK_INFO_URL='https://sso.sk.ru/auth/realms/membersSK/protocol/openid-connect/userinfo'
+SK_SYSTEM_ID='MIC-Mos.ru'
+SK_SECRET='810f78d9-4012-47c5-ad6e-cf9c5238a7be'
+
+ULK_SYSTEM='ITCLUSTER'
+ULK_TOKEN='cf72db350fb141a3af45b740bf63a4e2'
+ULK_CORP_INFO_URL='http://release.ulk.srvdev.ru/ws/profile/v1/get/legal'
+ULK_TRUSTED_API_ADDRESS='https://www.mos.ru/pgu/common/ajax/trust/'
+ULK_FRONT_LOGIN_ID='ITCLUSTER'
+ULK_FRONT_TOKEN='a1a85d0b-6513-48cc-b91b-946964cc5588'
+ULK_BACK_LOGIN_ID='ITCLUSTER'
+ULK_BACK_TOKEN='49ef0dd6-e213-4a95-8442-5fdca8f48d08'
+
+
+#Рассылка при создании новой заявки в бирже контрактов (указать через точку с зяпятой без пробелов)
+EXCHANGE_REQUEST_EMAIL=glebmakhmutov@gmail.com;lerneras@cluster.mos.ru;tolstoviy@cluster.mos.ru;main.vladislav@gmail.com;shivedg@cluster.mos.ru
+EXCHANGE_REQUEST_ID='1e3470a85e514386bb7dc67b46cbcdb0'
+
+#Рассылка при создании новой заявки на аккредитацию в бирже контрактов (указать через точку с зяпятой без пробелов)
+EXCHANGE_ACCREDITATION_EMAIL='glebmakhmutov@gmail.com'
+EXCHANGE_ACCREDITATION_METAL_ID='51bc9ae9c7d6432fb846d3a34bb402d5'
+EXCHANGE_ACCREDITATION_PHARMA_ID='c4fc9c4abe404bf99f7a598588f0f908'
+EXCHANGE_ACCREDITATION_INSTRUMENT_ID='959a5e8ae9d34b658b9e21079be1827a'
+EXCHANGE_ACCREDITATION_COSMETICS_ID='31c047763ebd4e2fb90787b62906a56d'
+EXCHANGE_ACCREDITATION_LEGPROM='6434e2de4d7745db986bb7167ec9fd66'
+EXCHANGE_MAIL_HOST='https://i.moscow'
+
+EXCHANGE_STATUS_CONFIRM=730;749;1163;1165;1167;1169
+EXCHANGE_STATUS_REJECTED=731;747;1164;1166;1168;1170
+
+#CTE заявки
+CTE_URl='http://api.zakupki.mos.ru'
+CTE_TOKEN='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJJTW9zY293IiwiZXhwIjoxODkwMjkwMjM2LCJpc3MiOiJQcDMuSW50ZWdyYXRpb24uSG9zdCIsImF1ZCI6Imh0dHBzOi8vemFrdXBraS5tb3MucnUvIn0.87gKZ0Pa_ZOA93JlIpQvHv-Bs5QhEtraB-cPRgNp640'
+
+ZAKUPKI_URL='https://zakupki.mos.ru'
+
+DADATA_API_KEY='4812bac5c7b0bf4f81e921e7492a0a66ff38c31d'
+
+#ONLY OFFICE
+DOC_SHOW_EDIT_BTN=0
+DOC_SERV_CONVERTER_URL='https://editor-itcluster.srvdev.ru/docsrv/ConvertService.ashx'
+DOC_SERV_API_URL='https://editor-itcluster.srvdev.ru/docsrv/web-apps/apps/api/documents/api.js'
+DOC_SERV_PRELOADER_URL='https://editor-itcluster.srvdev.ru/docsrv/web-apps/apps/api/documents/cache-scripts.html'
+FILE_SIZE_MAX=5242880
+STORAGE_PATH='upload/users/'
+ALONE=FALSE
+DOC_SERV_VIEWD='.pdf,.djvu,.xps'
+#DOC_SERV_EDITED='.doc,.docx,.xlsx,.csv,.pptx,.txt'
+DOC_SERV_EDITED=''
+DOC_SERV_CONVERT='.docm,.doc,.dotx,.dotm,.dot,.odt,.fodt,.ott,.xlsm,.xls,.xltx,.xltm,.xlt,.ods,.fods,.ots,.pptm,.ppt,.ppsx,.ppsm,.pps,.potx,.potm,.pot,.odp,.fodp,.otp,.rtf,.mht,.html,.htm,.epub'
+DOC_SERV_TIMEOUT=120000
+DOC_SERV_JWT_SECRET=''
+MOBILE_REGEX='android|avantgo|playbook|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od|ad)|iris|kindle|lge |maemo|midp|mmp|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\\/|plucker|pocket|psp|symbian|treo|up\\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino'
+EXTS_SPREADSHEET='.xls,.xlsx,.xlsm,.xlt,.xltx,.xltm,.ods,.fods,.ots,.csv'
+EXTS_PRESENTATION='.pps,.ppsx,.ppsm,.ppt,.pptx,.pptm,.pot,.potx,.potm,.odp,.fodp,.otp'
+EXTS_DOCUMENT='.doc,.docx,.docm,.dot,.dotx,.dotm,.odt,.fodt,.ott,.rtf,.txt,.html,.htm,.mht,.pdf,.djvu,.fb2,.epub,.xps'
+
+REDIS_DSN='redis://EB8c$gCeCVI_Kwhk@172.24.53.131:6379'
+
+RECAPTCHA_SECRET='6LfT074UAAAAAH6nCw6jTf2vBfpMhfTSzb6PWvRF'
+RECAPTCHA_SITE_KEY='6LfT074UAAAAAAbqFPaURxfDb-vbFIHBweu275GM'
+
+NODE_NUMBER=1
+ROOM_RENT_MEASURESERVICES_GUID='e3fdb0f622c64b1ea33ed394cae02350'

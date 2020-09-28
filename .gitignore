@@ -1,0 +1,12 @@
+build
+itcluster
+tmp
+projectsDir
+rsa
+__pycache__
+src/adms/__pycache__
+src/srv/__pycache__
+src/projects/__pycache__
+projectsDir/*
+fpmfiles/*
+rsa/

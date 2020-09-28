@@ -1,18 +1,20 @@
-memory_limit = 2G
+memory_limit = 4G
+post_max_size = 300M
+upload_max_filesize = 200M
 
-always_populate_raw_post_data = -1
+#always_populate_raw_post_data = -1
 
-cgi.fix_pathinfo = 1
+#cgi.fix_pathinfo = 1
 
-fastcgi_split_path_info = 1
+#fastcgi_split_path_info = 1
 
-max_execution_time = 18000
+max_execution_time = 180000
 
-flag session.auto_start = off
+#flag session.auto_start = off
 
-zlib.output_compression = on
+#zlib.output_compression = on
 
-suhosin.session.cryptua = off
+#suhosin.session.cryptua = off
 
-display_errors = Off
+display_errors = On
 
